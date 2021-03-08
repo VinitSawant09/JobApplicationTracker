@@ -7,13 +7,13 @@ function registerUser()
 if(validateCredentials())
 
 {
-	 console.log("Valid");
+	
      document.getElementById("errorLogin").innerHTML="";
      
 }
 else
 {
-	console.log("Invalid");
+	
 	document.getElementById("errorLogin").innerHTML="Please Enter Credentials.";
 }
 }
@@ -27,13 +27,13 @@ function login()
 if(validateCredentials())
 
 {
-	 console.log("Valid");
+	
      document.getElementById("errorLogin").innerHTML="";
      
 }
 else
 {
-	console.log("Invalid");
+	
 	document.getElementById("errorLogin").innerHTML="Please Enter Credentials.";
 }
 }

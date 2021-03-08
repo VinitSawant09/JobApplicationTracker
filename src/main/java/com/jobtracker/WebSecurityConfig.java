@@ -17,15 +17,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		protected void configure(HttpSecurity http) throws Exception {
 			http
 				.authorizeRequests()
-					.antMatchers("/","/css/**","/js/**","/signup").permitAll()
+					.antMatchers("/","/css/**","/js/**","/signup","/h2-console/**").permitAll()
 					.anyRequest().authenticated()
 					.and()
 				.formLogin()
 					.loginPage("/")
 					.permitAll()
 					.and()
+					.csrf().ignoringAntMatchers("/h2-console/**").and()
 				.logout()
 					.permitAll();
+			
+			http.headers().frameOptions().disable();
 		}
 
 		@Bean
