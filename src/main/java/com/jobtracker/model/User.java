@@ -16,14 +16,19 @@ public class User {
 	    private int id;
 	 
 	 
-	 @Column(name = "userid")
-	private String userid;
+	 public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	@Column(name = "username")
+	private String username;
 	 
 	 @Column(name = "password")
 	private String password;
 	 
-	 @Column(name = "createdOn")
-		private String createdOn;
+	 
 	
 	public int getId() {
 		return id;
@@ -31,34 +36,24 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getCreatedOn() {
-		return createdOn;
-	}
-	public void setCreatedOn(String createdOn) {
-		this.createdOn = createdOn;
-	}
+	
 	public User()
     {
      super();
     }
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
+	
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public User(int id, String userid, String password, String createdOn) {
+	public User(int id, String username, String password) {
 		super();
 		this.id = id;
-		this.userid = userid;
+		this.username = username;
 		this.password = password;
-		this.createdOn = createdOn;
+		
 	}
 	
 	 

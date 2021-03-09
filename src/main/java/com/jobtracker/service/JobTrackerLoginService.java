@@ -1,25 +1,16 @@
 package com.jobtracker.service;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Component;
 
-import com.jobtracker.dao.JobTrackerLoginDAO;
+
+
+import com.jobtracker.model.User;
 
 @Component
-public class JobTrackerLoginService {
+public interface JobTrackerLoginService {
 
-	Logger logger = LogManager.getLogger(JobTrackerLoginService.class);
+	public User saveUser(User user);
 	
-	@Autowired
-	JobTrackerLoginDAO objJobTrackerLoginDAO;
 	
-	public boolean register()
-	{
-		logger.info("Inside register method of class JobTrackerLoginService ");
-		boolean result = false;
-		
-		return result;
-		}
 }
